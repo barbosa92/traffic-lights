@@ -10,3 +10,55 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background-color: rosybrown;
+}
+.pole {
+    height: 50px;
+    width: 5px;
+    background-color: black;
+    
+}
+
+.signal {
+    height: 200px;
+    width: 70px;
+    background-color: black;
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+.ambar {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-radius: 50px;
+
+}
+
+.green {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    border-radius: 50px;
+
+}
+
+.selected {
+    background-color: #fff;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin:  auto;
+  box-shadow: 0 0 5px #fff, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 35px red, 0 0 40px red;
+}
