@@ -5,31 +5,61 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
-	const [count, encender] = useState(null);
+	const [estado, lightOn] = useState("");
 
 	return (
 		<div>
-			<p>Has dado click {count} veces</p>
 			<div className="pole"></div>
 			<div className="signal">
 				<div
-					className="red"
-					onClick={() => encender((className = "red bright"))}></div>
+					id="redLight"
+					className={estado != "redLight" ? "" : "redSelected"}
+					onClick={() => {
+						lightOn("redLight");
+					}}></div>
 
 				<div
-					className="ambar"
-					onClick={() =>
-						encender((className = "ambar bright"))
-					}></div>
+					id="amberLight"
+					className={estado != "amberLight" ? "" : "amberSelected"}
+					onClick={() => {
+						lightOn("amberLight");
+					}}></div>
 
 				<div
-					className="green"
-					onClick={() =>
-						encender((className = "green bright"))
-					}></div>
+					id="greenLight"
+					className={estado != "greenLight" ? "" : "greenSelected"}
+					onClick={() => {
+						lightOn("greenLight");
+					}}></div>
 			</div>
 		</div>
 	);
 };
+
+// const Home = () => {
+// 	const [estado, lightOn] = useState(false);
+
+// 	return (
+// 		<div>
+// 			<div className="pole"></div>
+// 			<div className="signal">
+// 			<div
+// 					className={estado ? "selected" : "no"}
+// 					id="redLight"
+// 					onClick={() => lightOn(true)}></div>
+
+// 				<div
+// 					className={estado ? "selected" : "no"}
+// 					id="amberLight"
+// 					onClick={() => lightOn(true)}></div>
+
+// 				<div
+// 					className={estado ? "selected" : "no"}
+// 					id="greenLight"
+// 					onClick={() => lightOn(true)}></div>
+// 			</div>
+// 		</div>
+// 	);
+// };
 
 export default Home;
